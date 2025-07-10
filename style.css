@@ -15,7 +15,6 @@ body{
 	text-align: center;
 }
 
-
 a{
 	color: #FF6F00;
 }
@@ -27,7 +26,6 @@ a{
 	height: 400px;
 }
 
-
 .grp{
 	border: 1px solid #FAF3E0;
 	border-radius: 100px;
@@ -36,24 +34,18 @@ a{
 	margin-left: 10px;
 }
 
-
-
-
-
-/* The sidebar menu */
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 200px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%; 
+  width: 200px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
   left: 0;
-  background-color: #fae3a3; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: #fae3a3; 
+  overflow-x: hidden; 
   padding-top: 20px;
 }
 
-/* The navigation menu links */
 .sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -62,7 +54,6 @@ a{
   display: block;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: #f1f1f1;
 }
