@@ -98,7 +98,6 @@ a{
         body {
             background-color: #ffeeee;
             margin: 0;
-            overflow: hidden;
         }
         .balle {
             width: 50px;

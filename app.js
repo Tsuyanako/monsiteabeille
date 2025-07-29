@@ -32,18 +32,27 @@ if (name === "Alice") {
 
 
 
-
 let balle = document.querySelector(".balle");
 let beeImg = balle.querySelector("img");
+let beeActive = false;
+
+balle.style.display = "none";
+
+const toggleBeeBtn = document.getElementById("toggleBee");
+toggleBeeBtn.addEventListener("click", function() {
+    beeActive = !beeActive;
+    balle.style.display = beeActive ? "block" : "none";
+});
 
 document.addEventListener("mousemove", function(event) {
-    let x = event.clientX;
-    let y = event.clientY;
+    if (!beeActive) return;
+    let x = event.pageX;
+    let y = event.pageY;
 
     // Position de la balle
     let balleRect = balle.getBoundingClientRect();
-    let balleCenterX = balleRect.left + balleRect.width / 2;
-    let balleCenterY = balleRect.top + balleRect.height / 2;
+    let balleCenterX = balleRect.left + balleRect.width / 2 + window.scrollX;
+    let balleCenterY = balleRect.top + balleRect.height / 2 + window.scrollY;
 
     // Calcul de l'angle entre la balle et le curseur
     let dx = x - balleCenterX;
@@ -56,8 +65,8 @@ document.addEventListener("mousemove", function(event) {
     // Déplacement de la balle
     if (y < 122) y = 122;
     balle.style.transition = "top 0.3s ease-out, left 0.3s ease-out";
-    balle.style.top = y - 55 + "px";
-    balle.style.left = x - 70 + "px";
+    balle.style.top = (y - 55) + "px";
+    balle.style.left = (x - 70) + "px";
 });
 
         // Fonction pour changer la couleur de la balle quand on clique dessus
